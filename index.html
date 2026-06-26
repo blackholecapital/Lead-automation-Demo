@@ -3,164 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ACE Host × XYZ Labs | AI Automation Demo</title>
-  <meta name="description" content="Live AI automation workflow demo powered by XYZ Labs, Cloudflare Workers, and Switchboard Automation 360." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Ace Host x XYZ Labs | AI Automation Demo</title>
+  <meta name="description" content="Instant AI automation workflow demo by Ace Host and XYZ Labs." />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <div class="page-shell">
-    <header class="topbar">
-      <a class="brand" href="#top" aria-label="ACE Host AI Automation Demo">
-        <img src="assets/acehost-mark.svg" alt="ACE Host" />
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Ace Host AI Automation Demo home">
+        <img src="./assets/acehost-mark.svg" alt="Ace Host" class="brand-mark" />
         <span>
           <strong>AI Automation Demo</strong>
           <small>Powered by XYZ Labs</small>
         </span>
       </a>
-      <nav>
-        <a href="#workflow">Workflow</a>
+      <nav class="nav-links" aria-label="Page navigation">
         <a href="#demo">Live Form</a>
+        <a href="#workflow">Workflow</a>
         <a href="#qr">QR Codes</a>
         <a href="https://github.com/blackholecapital/Lead-automation-Demo" target="_blank" rel="noreferrer">GitHub ↗</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero grid-frame">
+      <section class="hero-grid section-frame" id="demo">
         <div class="hero-copy">
-          <p class="eyebrow">ACE Host × XYZ Labs</p>
-          <h1>Instant AI automation workflow demo.</h1>
-          <p class="lede">
-            Scan a QR code, submit a lead, validate through a Cloudflare Worker, trigger Switchboard Automation 360,
-            and route email, SMS, calendar booking, sales alerts, and CRM capture.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#demo">Run the demo →</a>
-            <a class="btn ghost" href="#workflow">View workflow</a>
-          </div>
-          <div class="status-pill"><span></span> demo landing page · automation wiring pending</div>
-        </div>
-
-        <aside class="hero-panel" id="qr">
-          <div class="qr-card">
-            <img src="assets/live-demo-qr.png" alt="QR code for auto.xyz-labs.xyz" />
-            <div>
-              <strong>Live Demo</strong>
-              <a href="https://auto.xyz-labs.xyz" target="_blank" rel="noreferrer">auto.xyz-labs.xyz ↗</a>
-            </div>
-          </div>
-          <div class="qr-card">
-            <img src="assets/github-qr.png" alt="QR code for GitHub repository" />
-            <div>
-              <strong>GitHub Repo</strong>
-              <a href="https://github.com/blackholecapital/Lead-automation-Demo" target="_blank" rel="noreferrer">Lead Automation Demo ↗</a>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <section id="workflow" class="workflow-section">
-        <div class="section-head">
-          <p class="eyebrow">Customer Demo Flow</p>
-          <h2>From QR scan to CRM record.</h2>
-        </div>
-
-        <div class="workflow-ribbon" aria-label="Customer automation workflow">
-          <div class="flow-step"><span>01</span><strong>Scan QR</strong></div>
-          <div class="arrow">→</div>
-          <div class="flow-step"><span>02</span><strong>Submit form</strong></div>
-          <div class="arrow">→</div>
-          <div class="flow-step"><span>03</span><strong>Worker validates</strong></div>
-          <div class="arrow">→</div>
-          <div class="flow-step"><span>04</span><strong>Automation starts</strong></div>
-          <div class="arrow">→</div>
-          <div class="flow-step"><span>05</span><strong>Email + SMS</strong></div>
-          <div class="arrow">→</div>
-          <div class="flow-step"><span>06</span><strong>Book appointment</strong></div>
-          <div class="arrow">→</div>
-          <div class="flow-step"><span>07</span><strong>Sales notified</strong></div>
-          <div class="arrow">→</div>
-          <div class="flow-step"><span>08</span><strong>Lead in CRM</strong></div>
-        </div>
-
-        <div class="orchestration">
-          <article class="system-card">
-            <img src="assets/general-chaos.svg" alt="General Chaos icon" />
-            <div>
-              <p class="eyebrow">Cloudflare Worker</p>
-              <h3>General Chaos</h3>
-              <p>Validates payload, normalizes lead data, and hands the event into the automation path.</p>
-            </div>
-          </article>
-          <article class="system-card">
-            <div class="icon-pill">360</div>
-            <div>
-              <p class="eyebrow">Switchboard</p>
-              <h3>Automation 360</h3>
-              <p>Runs the demo workflow: welcome email, calendar SMS, sales notification, confirmation, and CRM record.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="demo" class="demo-layout">
-        <div class="section-head sticky-copy">
           <p class="eyebrow">Trade Show + Website Capture</p>
-          <h2>Sample contact card for your company.</h2>
-          <p>
+          <h1>Sample contact card for your company.</h1>
+          <p class="lede">
             This placeholder form is ready for Cloudflare Pages now. Backend wiring can attach to the live Worker when the demo workflow is activated.
           </p>
-          <ul class="feature-list">
+          <ul class="proof-list">
             <li>Salesperson routing: CJ, Joe, Russell, or Other</li>
             <li>Lead metadata capture for booth and web traffic</li>
             <li>Designed for email, SMS, calendar, and CRM automation</li>
           </ul>
         </div>
 
-        <form class="lead-card" onsubmit="return window.demoSubmit(event)">
-          <p class="eyebrow">Instant AI Automation Demo</p>
+        <form class="demo-card" aria-label="Instant AI automation demo form">
+          <p class="eyebrow hot">Instant AI Automation Demo</p>
           <h2>Watch automation save time and money.</h2>
 
-          <fieldset class="radio-row">
+          <fieldset class="route-box">
             <legend>Route this demo to</legend>
-            <label><input type="radio" name="owner" value="CJ" checked /> CJ</label>
-            <label><input type="radio" name="owner" value="Joe" /> Joe</label>
-            <label><input type="radio" name="owner" value="Russell" /> Russell</label>
-            <label><input type="radio" name="owner" value="Other" /> Other</label>
+            <label><input type="radio" name="owner" value="CJ" checked /> <span>CJ</span></label>
+            <label><input type="radio" name="owner" value="Joe" /> <span>Joe</span></label>
+            <label><input type="radio" name="owner" value="Russell" /> <span>Russell</span></label>
+            <label><input type="radio" name="owner" value="Other" /> <span>Other</span></label>
           </fieldset>
 
-          <div class="field-grid">
-            <label>Name <input name="name" placeholder="Jane Operator" required /></label>
-            <label>Company <input name="company" placeholder="Example Co." /></label>
-            <label>Email <input type="email" name="email" placeholder="jane@example.com" required /></label>
-            <label>Phone <input name="phone" placeholder="(555) 000-0000" /></label>
+          <div class="form-grid">
+            <label>Name<input type="text" placeholder="Jane Operator" /></label>
+            <label>Company<input type="text" placeholder="Example Co." /></label>
+            <label>Email<input type="email" placeholder="jane@example.com" /></label>
+            <label>Phone<input type="tel" placeholder="(555) 000-0000" /></label>
           </div>
 
           <label>What workflow should we automate?
-            <select name="workflow">
-              <option>Lead follow-up + appointment scheduling</option>
-              <option>AI data center intake</option>
+            <select>
               <option>Crypto mining facility inquiry</option>
-              <option>Custom business automation</option>
+              <option>AI data center lead routing</option>
+              <option>Dedicated server sales follow-up</option>
+              <option>Trade show appointment booking</option>
+              <option>Custom automation request</option>
             </select>
           </label>
 
           <label>Message
-            <textarea name="message" rows="5" placeholder="Tell us what should happen after a customer submits the form."></textarea>
+            <textarea placeholder="Tell us what should happen after a lead arrives."></textarea>
           </label>
 
-          <button class="btn primary wide" type="submit">Run Demo →</button>
-          <p class="form-note" id="formNote">Placeholder mode: no data leaves this page yet.</p>
+          <button type="button" id="demoButton">Run demo placeholder →</button>
+          <p class="form-note" id="demoNote">Frontend live. Worker wiring pending.</p>
         </form>
       </section>
-    </main>
 
-    <footer>
-      <span>ACE Host × XYZ Labs</span>
-      <span>Cloudflare Workers · Switchboard Automation 360 · CRM Pipeline</span>
-    </footer>
+      <section class="workflow-section section-frame" id="workflow">
+        <div class="section-heading compact">
+          <p class="eyebrow">Customer Demo Workflow</p>
+          <h2>One scan. One form. Full follow-up chain.</h2>
+        </div>
+        <figure class="workflow-image-card">
+          <img src="./assets/demo-workflow.png" alt="Customer demo flow from scan QR through CRM capture" />
+        </figure>
+      </section>
+
+      <section class="qr-section section-frame" id="qr">
+        <div class="section-heading">
+          <p class="eyebrow">Demo Links</p>
+          <h2>QR codes for proposal, booth, and live testing.</h2>
+          <p>Keep these at the bottom so the demo card is the first thing buyers see.</p>
+        </div>
+
+        <div class="qr-grid">
+          <article class="qr-card">
+            <img src="./assets/live-demo-qr.png" alt="QR code for live demo" />
+            <div>
+              <p class="eyebrow">Live Demo</p>
+              <h3>Automation Page</h3>
+              <a href="https://auto.xyz-labs.xyz" target="_blank" rel="noreferrer">auto.xyz-labs.xyz ↗</a>
+            </div>
+          </article>
+
+          <article class="qr-card">
+            <img src="./assets/github-qr.png" alt="QR code for GitHub repository" />
+            <div>
+              <p class="eyebrow">Source</p>
+              <h3>GitHub Repo</h3>
+              <a href="https://github.com/blackholecapital/Lead-automation-Demo" target="_blank" rel="noreferrer">Lead Automation Demo ↗</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
   </div>
 
-  <script src="app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>

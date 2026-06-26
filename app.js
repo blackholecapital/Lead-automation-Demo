@@ -1,27 +1,9 @@
-window.demoSubmit = function demoSubmit(event) {
-  event.preventDefault();
+const button = document.getElementById("demoButton");
+const note = document.getElementById("demoNote");
 
-  const form = event.currentTarget;
-  const data = Object.fromEntries(new FormData(form).entries());
-  const note = document.getElementById("formNote");
-
-  note.textContent =
-    `Demo captured locally for ${data.owner || "sales"} · backend wiring pending · ready for Cloudflare Worker handoff.`;
-
-  form.classList.add("submitted");
-  setTimeout(() => form.classList.remove("submitted"), 900);
-
-  return false;
-};
-
-const flowSteps = document.querySelectorAll(".flow-step");
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("visible");
-    });
-  },
-  { threshold: 0.25 }
-);
-
-flowSteps.forEach(step => observer.observe(step));
+if (button && note) {
+  button.addEventListener("click", () => {
+    note.textContent = "Demo placeholder fired. Next wiring step: POST this card to the Cloudflare Worker and trigger Switchboard Automation 360.";
+    note.classList.add("active");
+  });
+}

@@ -1,21 +1,15 @@
-# ACE Host × XYZ Labs Lead Automation Demo
+# Lead Automation Demo final section-order repair
 
-Static landing page for `auto.xyz-labs.xyz`.
+Upload these files at the repository root.
 
-## Files
+Required existing assets:
 
-- `index.html`
-- `styles.css`
-- `app.js`
+- `assets/acehost-mark.svg`
+- `assets/demo-workflow.png`
 - `assets/github-qr.png`
 - `assets/live-demo-qr.png`
-- `assets/general-chaos.svg`
-- `assets/acehost-mark.svg`
 
-## Deploy
+Cloudflare Pages settings for this static site:
 
-Upload the whole folder to Cloudflare Pages or push to:
-
-https://github.com/blackholecapital/Lead-automation-Demo
-
-Current form is placeholder/local-only. The submit handler is in `app.js` and is ready to be swapped to a Cloudflare Worker POST.
+- Build command: leave blank
+- Build output directory: `/`

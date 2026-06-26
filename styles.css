@@ -231,69 +231,223 @@ button:hover { transform: translateY(-1px); }
 }
 
 
-/* ===== Mobile Optimization ===== */
-@media (max-width: 900px){
-  html,body{overflow-x:hidden;}
-  .hero,.hero-grid,.top-grid,.content-grid,.workflow-grid,.demo-grid,.grid,.two-col{
-    display:flex!important;
-    flex-direction:column!important;
-    gap:1.25rem!important;
+/* === Mobile-first trade-show repair patch ===
+   Goal: the live lead card is the first thing people see on phones.
+   The descriptive copy now sits underneath the form instead of stealing the first screen.
+*/
+.hero-grid {
+  grid-template-columns: 1.15fr .85fr;
+  align-items: start;
+}
+.demo-card { order: 1; }
+.hero-copy { order: 2; }
+.form-title {
+  margin-bottom: 10px;
+  font-size: clamp(42px, 4.8vw, 78px);
+  line-height: .92;
+  letter-spacing: -.055em;
+}
+.demo-card button {
+  min-height: 56px;
+}
+
+@media (max-width: 760px) {
+  html { scroll-padding-top: 0; }
+  body {
+    overflow-x: hidden;
+    background-size: auto, 28px 28px, 28px 28px, auto;
   }
-  .hero>*,
-  .hero-grid>*,
-  .top-grid>*,
-  .content-grid>*,
-  .workflow-grid>*,
-  .demo-grid>*,
-  .grid>*,
-  .two-col>*{
-    width:100%!important;
-    max-width:100%!important;
+  .page-shell {
+    width: 100%;
+    padding: 12px 10px 56px;
   }
-  h1{
-    font-size:2.4rem!important;
-    line-height:1.05!important;
+  .site-header {
+    gap: 14px;
+    padding: 10px 8px 16px;
   }
-  h2{font-size:1.8rem!important;}
-  .card,.panel,.form-card{
-    padding:1rem!important;
-    border-radius:18px!important;
+  .brand {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 136px 1fr;
+    align-items: center;
+    gap: 12px;
   }
-  form .row,
-  .form-row{
-    display:flex!important;
-    flex-direction:column!important;
-    gap:.85rem!important;
+  .brand-mark {
+    width: 136px;
+    max-height: 52px;
+    padding: 8px 12px;
   }
-  input,select,textarea,button{
-    width:100%!important;
-    font-size:16px!important;
-    box-sizing:border-box!important;
+  .brand strong {
+    font-size: 19px;
+    line-height: 1.05;
   }
-  .radio-group{
-    display:grid!important;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:.75rem!important;
+  .brand small {
+    margin-top: 4px;
+    font-size: 11px;
+    letter-spacing: .28em;
   }
-  .workflow-image img,
-  img.demo-workflow{
-    width:100%!important;
-    height:auto!important;
+  .nav-links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    font-size: 14px;
+    line-height: 1;
   }
-  .qr-section{
-    display:flex!important;
-    flex-direction:column!important;
-    gap:1rem!important;
+  .nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 8px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 999px;
+    background: rgba(0,0,0,.18);
+    white-space: nowrap;
   }
-  .qr-card{
-    width:100%!important;
+  .section-frame {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 20px;
   }
-  .nav{
-    flex-wrap:wrap!important;
-    justify-content:center!important;
-    gap:.75rem!important;
+  .hero-grid {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
-  section{
-    padding:1rem!important;
+  .demo-card {
+    padding: 18px 16px;
+    border-radius: 20px;
+    gap: 16px;
   }
+  .eyebrow {
+    margin-bottom: 10px;
+    font-size: 11px;
+    letter-spacing: .22em;
+  }
+  .form-title,
+  .demo-card h1 {
+    font-size: clamp(36px, 11.5vw, 50px);
+    line-height: .94;
+    letter-spacing: -.055em;
+    margin-bottom: 4px;
+  }
+  .route-box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 20px 12px 12px;
+    border-radius: 18px;
+  }
+  .route-box legend {
+    font-size: 10px;
+    letter-spacing: .18em;
+  }
+  .route-box label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 44px;
+    padding: 8px 10px;
+    border-radius: 14px;
+    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(255,255,255,.08);
+    font-size: 16px;
+  }
+  .route-box input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+    accent-color: #39ff91;
+    margin: 0;
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  label {
+    gap: 7px;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  input, select, textarea {
+    min-height: 50px;
+    padding: 13px 14px;
+    border-radius: 14px;
+    font-size: 16px;
+  }
+  textarea { min-height: 96px; }
+  button,
+  .demo-card button {
+    width: 100%;
+    min-height: 54px;
+    padding: 14px 18px;
+    font-size: 16px;
+  }
+  .form-note {
+    margin: -4px 0 0;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .hero-copy {
+    padding: 18px 2px 4px;
+  }
+  .hero-copy h2 {
+    font-size: clamp(30px, 9vw, 42px);
+    line-height: .98;
+    margin-bottom: 10px;
+  }
+  .lede,
+  .section-heading p,
+  .proof-list,
+  .hero-copy .lede {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+  .proof-list {
+    padding-left: 18px;
+    margin-bottom: 0;
+  }
+  .proof-list li { margin: 10px 0; }
+  .workflow-section { padding: 12px; }
+  .section-heading.compact h2,
+  .section-heading h2 {
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: 1;
+  }
+  .workflow-image-card {
+    margin-top: 14px;
+    border-radius: 16px;
+  }
+  .workflow-image-card img {
+    width: 100%;
+    height: auto;
+  }
+  .qr-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .qr-card {
+    grid-template-columns: 86px 1fr;
+    gap: 14px;
+    padding: 14px;
+    border-radius: 16px;
+  }
+  .qr-card img { width: 86px; border-radius: 12px; }
+  .qr-card h3 { font-size: 18px; }
+}
+
+@media (max-width: 390px) {
+  .brand {
+    grid-template-columns: 118px 1fr;
+  }
+  .brand-mark { width: 118px; }
+  .brand strong { font-size: 17px; }
+  .nav-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .form-title,
+  .demo-card h1 { font-size: 34px; }
+  .route-box { grid-template-columns: 1fr; }
 }

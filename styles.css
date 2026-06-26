@@ -229,3 +229,71 @@ button:hover { transform: translateY(-1px); }
   .qr-card { grid-template-columns: 108px 1fr; }
   .qr-card img { width: 108px; }
 }
+
+
+/* ===== Mobile Optimization ===== */
+@media (max-width: 900px){
+  html,body{overflow-x:hidden;}
+  .hero,.hero-grid,.top-grid,.content-grid,.workflow-grid,.demo-grid,.grid,.two-col{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:1.25rem!important;
+  }
+  .hero>*,
+  .hero-grid>*,
+  .top-grid>*,
+  .content-grid>*,
+  .workflow-grid>*,
+  .demo-grid>*,
+  .grid>*,
+  .two-col>*{
+    width:100%!important;
+    max-width:100%!important;
+  }
+  h1{
+    font-size:2.4rem!important;
+    line-height:1.05!important;
+  }
+  h2{font-size:1.8rem!important;}
+  .card,.panel,.form-card{
+    padding:1rem!important;
+    border-radius:18px!important;
+  }
+  form .row,
+  .form-row{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:.85rem!important;
+  }
+  input,select,textarea,button{
+    width:100%!important;
+    font-size:16px!important;
+    box-sizing:border-box!important;
+  }
+  .radio-group{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:.75rem!important;
+  }
+  .workflow-image img,
+  img.demo-workflow{
+    width:100%!important;
+    height:auto!important;
+  }
+  .qr-section{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:1rem!important;
+  }
+  .qr-card{
+    width:100%!important;
+  }
+  .nav{
+    flex-wrap:wrap!important;
+    justify-content:center!important;
+    gap:.75rem!important;
+  }
+  section{
+    padding:1rem!important;
+  }
+}

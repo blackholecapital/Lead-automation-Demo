@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220">
+<rect width="640" height="220" rx="36" fill="#07101b"/>
+<g fill="#fff"><rect x="48" y="72" width="160" height="22" rx="11"/><rect x="72" y="108" width="136" height="22" rx="11"/><rect x="96" y="144" width="112" height="22" rx="11"/></g>
+<text x="230" y="112" font-family="Arial Black, Arial" font-size="64" fill="#ff2b2b">ACE</text>
+<text x="230" y="168" font-family="Arial Black, Arial" font-size="64" fill="#fff">HOST</text>
+</svg>
